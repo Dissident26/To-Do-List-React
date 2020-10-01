@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import ToDoListMain from './components/ToDoListMain';
+import ToDoMain from './components/ToDoMain/ToDoMain';
 function App() {
   return (
-    <ToDoListMain/>
+    <ToDoMain/>
   );
 }
 
