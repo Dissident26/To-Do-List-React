@@ -55,7 +55,7 @@ export default class ToDoListMain extends React.Component {
         const index = this.state.data.indexOf(changed);
         const length = this.state.data.length;
         this.setState({data: [...this.state.data.slice(0, index), 
-            {id: changed.id, text: changed.text, date: changed.date, complited: (changed.complited) ? false : true}, 
+            {id: changed.id, text: changed.text, date: changed.date, complited: !changed.complited}, 
             ...this.state.data.slice(index+1, length)]});
             return null;
     };
