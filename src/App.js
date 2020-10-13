@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ToDoMain from './components/hooked/ToDoMain';
+import ToDoMain from './components/redux/ToDoMain';
 function App() {
   return (
     <ToDoMain/>

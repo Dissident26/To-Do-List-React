@@ -1,7 +1,10 @@
 import React from 'react';
 import SortSelect from '../SortSelect/SortSelect';
+import { connect } from 'react-redux';
+import {actionSortText, actionSortDate} from '../action-creators/action-creators';
 
-export default function SectionSort({onChangeText, onChangeDate}){
+function SectionSort({onChangeText, onChangeDate}){
+
     return(
         <div className="sort-item-section">
                     <SortSelect
@@ -19,3 +22,11 @@ export default function SectionSort({onChangeText, onChangeDate}){
                 </div>
     )
 };
+
+export default connect(
+    state => ({state}),
+    (dispatch) => ({
+        onChangeText: (e) => dispatch(actionSortText(e)),
+        onChangeDate: (e) => dispatch(actionSortDate(e)),
+    })
+)(SectionSort);
